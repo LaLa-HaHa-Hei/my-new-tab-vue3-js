@@ -10,10 +10,18 @@ import Settings from './components/Settings.vue'
 <template>
   <Background />
   <main>
-    <Clock />
-    <SearchEngineContainer />
-    <Meno />
-    <BookmarkContainer />
+    <div style="margin-top: 50px;">
+      <Clock />
+    </div>
+    <div style="margin-top: 20px;">
+      <SearchEngineContainer />
+    </div>
+    <div style="margin: 10px 15% 0 15%;">
+      <Meno />
+    </div>
+    <div style="margin-top: 20px;margin-bottom: 20px;flex: 1;overflow: hidden;">
+      <BookmarkContainer />
+    </div>
   </main>
   <Settings />
 </template>
@@ -24,25 +32,5 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-/* 不知道为啥会影响子组件Clock.vue的样式，先除以二，待修复 */
-:deep(.clock) {
-  margin-top: 50px;
-}
-
-:deep(.search-engine-container) {
-  margin-top: 20px;
-}
-
-:deep(.memo) {
-  margin: 10px 15% 0 15%;
-}
-
-:deep(.bookmark-container) {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  flex: 1;
-  overflow: hidden;
 }
 </style>
