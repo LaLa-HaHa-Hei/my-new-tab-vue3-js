@@ -9,37 +9,37 @@ import Settings from './components/Settings.vue'
 
 <template>
   <Background />
-  <div class="clock">
+  <main>
     <Clock />
-  </div>
-  <div class="search-engine-container">
     <SearchEngineContainer />
-  </div>
-  <div class="memo">
     <Meno />
-  </div>
-  <div class="bookmark-container">
     <BookmarkContainer />
-  </div>
-  <div class="settings">
-    <Settings />
-  </div>
+  </main>
+  <Settings />
 </template>
 
 <style scoped>
-.clock {
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 不知道为啥会影响子组件Clock.vue的样式，先除以二，待修复 */
+:deep(.clock) {
   margin-top: 50px;
 }
 
-.search-engine-container {
+:deep(.search-engine-container) {
   margin-top: 20px;
 }
 
-.memo {
-  margin: 10px 15% 10px 15%;
+:deep(.memo) {
+  margin: 10px 15% 0 15%;
 }
 
-.bookmark-container {
+:deep(.bookmark-container) {
   margin-top: 20px;
   margin-bottom: 20px;
   flex: 1;

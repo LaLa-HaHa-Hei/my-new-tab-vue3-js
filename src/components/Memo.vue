@@ -1,5 +1,7 @@
 <template>
-    <textarea ref="textareaRef" v-model="memo" placeholder="备忘录"></textarea>
+    <div class="memo">
+        <textarea ref="textareaRef" v-model="memo" placeholder="备忘录"></textarea>
+    </div>
 </template>
 
 <script setup lang="js">
