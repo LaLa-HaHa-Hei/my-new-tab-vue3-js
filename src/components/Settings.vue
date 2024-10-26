@@ -103,6 +103,9 @@
                                 <button @click="exportSettings">导出配置到剪切板</button>&ensp;&ensp;
                                 <button @click="importSettings">从剪切板导入配置</button>
                                 <br />
+                                <br />
+                                <button @click="clearSettings" style="color: red;">清除所有配置</button>
+                                <br />
                                 <!-- <button @click="exportSettingsAsFile">{{ $t('settings.otherPage.exportAsFile')
                                     }}></button>
                                 <button ref="importSettingsFromFileField" @click="importSettingsFromFile">{{
@@ -233,6 +236,15 @@ async function importSettings() {
     }
 }
 
+// 清除所有设置
+function clearSettings() {
+    const confirmResult = confirm('确定要清除所有设置吗？')
+    if (!confirmResult)
+        return
+    localStorage.clear()
+    window.location.reload(true)
+}
+
 // async function exportSettingsAsFile() {
 //     const settingsStr = await navigator.clipboard.readText()
 //     const settingsObj = JSON.parse(settingsStr)
@@ -352,15 +364,26 @@ ul {
 .modal-content {
     position: absolute;
     top: 15%;
+    height: 70%;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
-    height: 70%;
     background-color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+}
+
+@media (max-width: 699px) {
+    .modal-content {
+        width: 95%;
+    }
+}
+
+@media (min-width: 700px) {
+    .modal-content {
+        width: 70%;
+    }
 }
 
 .modal-content nav {

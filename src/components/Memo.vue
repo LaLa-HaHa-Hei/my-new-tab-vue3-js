@@ -18,7 +18,7 @@ const saveMemoDebounced = debounce(() => {
 function resetHeight() {
     textareaRef.value.style.height = 'auto'; // 重置高度以获取正确的 scrollHeight
     const newHeight = textareaRef.value.scrollHeight;
-    textareaRef.value.style.height = newHeight + 'px';
+    textareaRef.value.style.height = newHeight - 16 + 'px';
 }
 
 watch(() => memo.value, () => {
@@ -40,7 +40,8 @@ window.addEventListener('beforeunload', () => {
 
 <style scoped>
 textarea {
-    width: 100%;
+    overflow: auto;
+    width: calc(100% - 21px);
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     padding: 10px;

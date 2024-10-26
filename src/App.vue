@@ -16,7 +16,7 @@ import Settings from './components/Settings.vue'
     <div style="margin-top: 20px;">
       <SearchEngineContainer />
     </div>
-    <div style="margin: 10px 15% 0 15%;">
+    <div style="margin: 10px 11% 0 11%;">
       <Meno />
     </div>
     <div style="margin-top: 20px;margin-bottom: 20px;flex: 1;overflow: hidden;">

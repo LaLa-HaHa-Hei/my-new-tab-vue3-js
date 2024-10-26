@@ -83,7 +83,8 @@ async function handleMouseEnterInput() {
 }
 
 function handleFocusInInput() {
-    inputBoxStyleClass.value = 'search-engine-input-box-focus-in'
+    if (inputBoxStyleClass.value !== 'search-engine-input-box-show-suggestion')
+        inputBoxStyleClass.value = 'search-engine-input-box-focus-in'
 }
 // 输入框失去焦点时，隐藏建议列表
 function handleFocusOutInput() {
@@ -127,6 +128,8 @@ function handleMouseDownLI(index) {
 }
 
 .search-engine-input-box input {
+    /* 没有width:0时缩短到一定就不会继续缩短 */
+    width: 0;
     flex: 1;
     font-size: 110%;
     padding-left: 24px;

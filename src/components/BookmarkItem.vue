@@ -183,9 +183,9 @@ function showModal() {
 .bookmark-item>.bookmark-button {
     cursor: pointer;
     border: none;
-    width: 64px;
-    height: 64px;
-    border-radius: 15px;
+    /* width: 64px;
+    height: 64px; */
+    border-radius: 12px;
     font-size: 130%;
     font-weight: 600;
     text-align: center;
@@ -193,6 +193,30 @@ function showModal() {
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */
+}
+
+@media (max-width: 699px) {
+    .bookmark-item>.bookmark-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .modal-content {
+        width: 95%;
+        top: 5%;
+    }
+}
+
+@media (min-width: 700px) {
+    .bookmark-item>.bookmark-button {
+        width: 64px;
+        height: 64px;
+    }
+
+    .modal-content {
+        width: 70%;
+        top: 15%;
+    }
 }
 
 .bookmark-name {
@@ -244,10 +268,8 @@ function showModal() {
 
 .modal-content {
     position: absolute;
-    top: 15%;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
     height: 440px;
     background-color: white;
     border-radius: 20px;

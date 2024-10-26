@@ -5,18 +5,18 @@ export const useSearchEngineContainerStore = defineStore('searchEngineContainer'
         return {
             searchEngineSettings: {
                 openInNewTab: true, // 是否在新标签页中打开搜索
-                gridColumnCount: 3, // 没行显示几个搜索引擎
+                gridColumnCount: 2, // 没行显示几个搜索引擎
                 searchEngineName: 'bing',
                 searchEngineList: []
             },
             defaultSearchEngineSettings: {
                 openInNewTab: true, // 是否在新标签页中打开搜索
-                gridColumnCount: 3, // 没行显示几个搜索引擎
+                gridColumnCount: 2, // 没行显示几个搜索引擎
                 searchEngineName: 'bing',
                 searchEngineList: [
                     {
                         id: '1725892663580',
-                        used: true,
+                        used: false,
                         name: 'google',
                         icon: './images/search-engines/google.png',
                         searchStatement: 'https://www.google.com/search?q=%s'

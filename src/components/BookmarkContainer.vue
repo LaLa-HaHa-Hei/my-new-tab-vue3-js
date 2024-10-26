@@ -66,7 +66,7 @@
 
 <script setup lang="js">
 import BookmarkItem from './BookmarkItem.vue'
-import { ref, onBeforeMount, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useBookmarkContainerStore } from '@/stores/bookmarkContainer'
 import debounce from 'lodash/debounce'
 defineOptions({
@@ -152,15 +152,16 @@ function addBookmark() {
 .bookmark-container {
     height: 100%;
     overflow: auto;
-    padding-left: 15%;
-    padding-right: 15%;
+    /* padding-left: 15%;
+    padding-right: 15%; */
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(90px, 1fr)); */
-    grid-template-columns: repeat(auto-fill, 90px);
-    grid-template-rows: repeat(auto-fill, 90px);
+    /* grid-template-columns: repeat(auto-fill, 90px);
+    grid-template-rows: repeat(auto-fill, 90px); */
     gap: 0px;
 }
+
 
 .bookmark-container::-webkit-scrollbar {
     display: none;
@@ -176,13 +177,51 @@ function addBookmark() {
     background-image: url('/images/bookmarks/add-bookmark.svg');
     cursor: pointer;
     border: none;
-    width: 64px;
-    height: 64px;
+    /* width: 64px;
+    height: 64px; */
     border-radius: 15px;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */
+}
+
+@media (max-width: 699px) {
+    .bookmark-container {
+        padding-left: 11%;
+        padding-right: 11%;
+        grid-template-columns: repeat(auto-fill, 70px);
+        grid-template-rows: repeat(auto-fill, 70px);
+    }
+
+    .add-bookmark-item>button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .modal-content {
+        width: 95%;
+        top: 5%;
+    }
+}
+
+@media (min-width: 700px) {
+    .bookmark-container {
+        padding-left: 15%;
+        padding-right: 15%;
+        grid-template-columns: repeat(auto-fill, 90px);
+        grid-template-rows: repeat(auto-fill, 90px);
+    }
+
+    .add-bookmark-item>button {
+        width: 64px;
+        height: 64px;
+    }
+
+    .modal-content {
+        width: 70%;
+        top: 15%;
+    }
 }
 
 .bookmark-name {
@@ -206,10 +245,8 @@ function addBookmark() {
 
 .modal-content {
     position: absolute;
-    top: 15%;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
     height: 440px;
     background-color: white;
     border-radius: 20px;

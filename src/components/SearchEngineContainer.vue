@@ -82,17 +82,10 @@ else {
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1499px) {
+@media (min-width: 1000px) {
     .search-engine-container {
         margin-left: 10%;
         margin-right: 10%;
-    }
-}
-
-@media (min-width: 1500px) {
-    .search-engine-container {
-        margin-left: 15%;
-        margin-right: 15%;
     }
 }
 </style>

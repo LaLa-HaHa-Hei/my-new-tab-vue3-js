@@ -18,38 +18,38 @@ export const useBookmarkContainerStore = defineStore('bookmarkContainer', {
                         backgroundColor: '#23a7f2',
                         backgroundText: ''
                     },
-                    {
-                        id: '1725892663581',
-                        name: 'freeGPTs',
-                        url: 'https://share.freegpts.org/list',
-                        backgroundIcon: '',
-                        backgroundColor: '#23a7f2',
-                        backgroundText: 'free GPTs'
-                    },
-                    {
-                        id: '1725892663582',
-                        name: 'DeepSeek',
-                        url: 'https://chat.deepseek.com/coder',
-                        backgroundIcon: './images/bookmarks/DeepSeek.svg',
-                        backgroundColor: '#23a7f2',
-                        backgroundText: ''
-                    },
-                    {
-                        id: '1725892663583',
-                        name: '词源',
-                        url: 'https://www.dictool.com/ciyuan/',
-                        backgroundIcon: './images/bookmarks/dictool.ico',
-                        backgroundColor: '#23a7f2',
-                        backgroundText: ''
-                    },
-                    {
-                        id: '1725892663584',
-                        name: '词跟',
-                        url: 'https://www.dictool.com/root/',
-                        backgroundIcon: './images/bookmarks/dictool.ico',
-                        backgroundColor: '#23a7f2',
-                        backgroundText: ''
-                    }
+                    // {
+                    //     id: '1725892663581',
+                    //     name: 'freeGPTs',
+                    //     url: 'https://share.freegpts.org/list',
+                    //     backgroundIcon: '',
+                    //     backgroundColor: '#23a7f2',
+                    //     backgroundText: 'free GPTs'
+                    // },
+                    // {
+                    //     id: '1725892663582',
+                    //     name: 'DeepSeek',
+                    //     url: 'https://chat.deepseek.com/coder',
+                    //     backgroundIcon: './images/bookmarks/DeepSeek.svg',
+                    //     backgroundColor: '#23a7f2',
+                    //     backgroundText: ''
+                    // },
+                    // {
+                    //     id: '1725892663583',
+                    //     name: '词源',
+                    //     url: 'https://www.dictool.com/ciyuan/',
+                    //     backgroundIcon: './images/bookmarks/dictool.ico',
+                    //     backgroundColor: '#23a7f2',
+                    //     backgroundText: ''
+                    // },
+                    // {
+                    //     id: '1725892663584',
+                    //     name: '词跟',
+                    //     url: 'https://www.dictool.com/root/',
+                    //     backgroundIcon: './images/bookmarks/dictool.ico',
+                    //     backgroundColor: '#23a7f2',
+                    //     backgroundText: ''
+                    // }
                 ]
             }
         }
