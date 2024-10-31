@@ -11,9 +11,16 @@ export const useSearchEngineContainerStore = defineStore('searchEngineContainer'
             },
             defaultSearchEngineSettings: {
                 openInNewTab: true, // 是否在新标签页中打开搜索
-                gridColumnCount: 2, // 没行显示几个搜索引擎
+                gridColumnCount: 3, // 没行显示几个搜索引擎
                 searchEngineName: 'bing',
                 searchEngineList: [
+                    {
+                        id: '1725892663585',
+                        used: true,
+                        name: 'bilibili',
+                        icon: './images/search-engines/bilibili.png',
+                        searchStatement: 'https://search.bilibili.com/all?&keyword=%s',
+                    },
                     {
                         id: '1725892663580',
                         used: false,
