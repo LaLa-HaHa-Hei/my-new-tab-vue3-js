@@ -37,11 +37,9 @@ const suggestionList = ref([])
 const activeLiIndex = ref()
 
 function search() {
-    if (searchText.value) {
-        const searchUrl = props.searchEngine.searchStatement.replace('%s', encodeURIComponent(searchText.value))
-        window.open(searchUrl, props.openInNewTab ? '_blank' : '_self')
-        searchText.value = ''
-    }
+    const searchUrl = props.searchEngine.searchStatement.replace('%s', encodeURIComponent(searchText.value))
+    window.open(searchUrl, props.openInNewTab ? '_blank' : '_self')
+    searchText.value = ''
 }
 
 function ShowSuggestions() {
