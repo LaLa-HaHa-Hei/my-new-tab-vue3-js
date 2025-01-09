@@ -14,7 +14,7 @@ export const useBookmarkContainerStore = defineStore('bookmarkContainer', {
                         id: '1725892663580',
                         name: '百度翻译',
                         url: 'https://fanyi.baidu.com/mtpe-individual/multimodal',
-                        backgroundIcon: './images/bookmarks/百度翻译.ico',
+                        backgroundIcon: './images/bookmarks/fanyi-baidu.ico',
                         backgroundColor: '#23a7f2',
                         backgroundText: ''
                     },

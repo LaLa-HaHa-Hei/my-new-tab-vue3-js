@@ -14,15 +14,15 @@ export const useBackgroundStore = defineStore('background', {
                 backgroundList: [
                     {
                         used: true,
-                        path: './images/backgrounds/湖心小屋.png'
+                        path: './images/backgrounds/LakeCabin.png'
                     },
                     {
                         used: true,
-                        path: './images/backgrounds/黛.png',
+                        path: './images/backgrounds/Dai.png',
                     }
                 ],
                 currentBackgroundPath: '',
-                defaultBackgroundPath: './images/backgrounds/黛.png'
+                defaultBackgroundPath: './images/backgrounds/Dai.png'
             }
         }
     }
