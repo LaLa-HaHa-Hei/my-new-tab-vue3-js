@@ -113,6 +113,9 @@ function imgError(event) {
     if (backgroundIconTemp.value.endsWith('ico')) {
         backgroundIconTemp.value = backgroundIconTemp.value.replace(/ico$/, 'png')
     }
+    else if (backgroundIconTemp.value.endsWith('png')) {
+        backgroundIconTemp.value = backgroundIconTemp.value.replace(/png$/, 'svg')
+    }
 }
 // 使用帮助
 function howToUseBackgroundIcon() {
